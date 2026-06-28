@@ -7,6 +7,15 @@ The logic is split into three COBOL programs:
 - `Operations` for business operations (view, credit, debit)
 - `DataProgram` for balance storage read/write
 
+## System Flow Diagram
+
+```mermaid
+flowchart TD
+  A[MainProgram] -->|TOTAL/CREDIT/DEBIT| B[Operations]
+  B -->|READ/WRITE| C[DataProgram]
+  C --> D[(Student Account Balance)]
+```
+
 ## File Purposes
 
 ### src/cobol/main.cob
